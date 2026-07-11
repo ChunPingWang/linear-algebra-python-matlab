@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+sympy
+jupyter
+nbconvert
+ipykernel
