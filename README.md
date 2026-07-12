@@ -18,7 +18,7 @@
 | `ch01_vectors.md` | 教學文件：概念說明、公式、手算範例、程式碼與練習題 |
 | `ch01_vectors.ipynb` | Jupyter Notebook：可互動執行的 Python 版本，已內含執行結果 |
 | `ch01_vectors.py` | 獨立可執行的 Python 腳本版本 |
-| `ch01_vectors.m` | 對應的 MATLAB 腳本（待你於 MATLAB 環境中驗證） |
+| `ch01_vectors.m` | 對應的 MATLAB 腳本（已用 GNU Octave 驗證，MATLAB 待你自行確認） |
 
 ## 章節目錄
 
@@ -63,13 +63,57 @@ jupyter notebook ch01_vectors/ch01_vectors.ipynb
 
 ### MATLAB
 
-用 MATLAB（建議 R2020b 以上版本）或 GNU Octave 開啟並執行 `.m` 檔案：
+用 MATLAB（建議 R2020b 以上版本）開啟並執行 `.m` 檔案：
 
 ```matlab
 run('ch01_vectors/ch01_vectors.m')
 ```
 
 > 全部 12 個 `.m` 檔案皆已用 GNU Octave 10.2 實際執行驗證通過，輸出數值與同章 Python 版本一致；為了同時相容 MATLAB 與 Octave，程式採用「function 檔案 + local function」寫法（檔案以 `function <檔名>()` 開頭），並避開了 `xline`/`yline`/`sgtitle`/`null(A,'r')` 等 Octave 尚未支援的較新函式。由於作者端沒有正版 MATLAB 授權，尚未在正式 MATLAB 環境執行，語法上都是標準 MATLAB 語法，建議你仍自行在 MATLAB 中執行一次確認。
+
+### GNU Octave（免費、可跨平台取代 MATLAB）
+
+如果你手邊沒有 MATLAB 授權，可以用免費開源的 [GNU Octave](https://octave.org/) 執行本教程的 `.m` 檔案，語法幾乎完全相容。
+
+**安裝：**
+
+```bash
+# macOS（Homebrew）
+brew install octave
+
+# Ubuntu / Debian
+sudo apt install octave
+
+# Windows：至 https://octave.org/download 下載安裝檔
+```
+
+**執行章節腳本（在該章節資料夾內，用命令列直接執行檔名即可）：**
+
+```bash
+cd ch01_vectors
+octave-cli ch01_vectors.m
+```
+
+或在 Octave 互動環境中執行：
+
+```matlab
+octave:1> cd ch01_vectors
+octave:2> ch01_vectors
+```
+
+也可以在專案根目錄用 `run()` 執行（效果相同）：
+
+```matlab
+octave:1> run('ch01_vectors/ch01_vectors.m')
+```
+
+**沒有圖形視窗（例如透過 SSH 遠端連線）時**，加上 `--no-gui` 參數即可，繪圖仍會正常存成 PNG 檔案，不需要顯示器：
+
+```bash
+octave-cli --no-gui ch01_vectors.m
+```
+
+**已知的 MATLAB／Octave 差異**：本教程的 `.m` 檔案已刻意避開 Octave 尚未支援的較新 MATLAB 函式（如 `xline`/`yline`/`sgtitle`、`null(A,'r')` 選項），並統一採用「function 檔案 + local function」寫法（而非 MATLAB R2016b+ 才支援的「script 檔案內含 local function」），因此兩邊都能直接執行，不需要額外修改。
 
 ## 建議學習順序
 
