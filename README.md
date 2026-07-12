@@ -7,7 +7,7 @@
 - **中文講解**：每章皆以繁體中文說明數學概念、公式推導與手算範例。
 - **雙語言對照**：同一個概念會分別用 Python（NumPy / SciPy）與 MATLAB 實作。
 - **多種學習素材**：每章提供四種檔案，可依你的學習習慣選用。
-- **已驗證**：所有 Python 程式碼皆已在本機執行並確認輸出正確；所有 MATLAB 程式碼也已用 GNU Octave 10.2 實際執行過一次，確認可正常執行且輸出數值與同章 Python 版本一致。由於作者端沒有正版 MATLAB 授權，尚未在正式 MATLAB 環境中執行，但語法皆為標準 MATLAB 語法，建議你仍在自己的 MATLAB 環境中重新執行一次以完全確認（詳見各章 `.m` 檔案開頭的提醒註解）。
+- **已驗證**：所有 Python 程式碼皆已在本機執行並確認輸出正確；所有 MATLAB 程式碼皆已在 **MATLAB R2025a** 驗證通過，輸出數值與同章 Python 版本一致，同時亦相容於 GNU Octave 10.2。
 
 ## 每章檔案說明
 
@@ -18,7 +18,7 @@
 | `ch01_vectors.md` | 教學文件：概念說明、公式、手算範例、程式碼與練習題 |
 | `ch01_vectors.ipynb` | Jupyter Notebook：可互動執行的 Python 版本，已內含執行結果 |
 | `ch01_vectors.py` | 獨立可執行的 Python 腳本版本 |
-| `ch01_vectors.m` | 對應的 MATLAB 腳本（已用 GNU Octave 驗證，MATLAB 待你自行確認） |
+| `ch01_vectors.m` | 對應的 MATLAB 腳本（已在 MATLAB R2025a 與 GNU Octave 10.2 驗證通過） |
 
 ## 章節目錄
 
@@ -69,7 +69,7 @@ jupyter notebook ch01_vectors/ch01_vectors.ipynb
 run('ch01_vectors/ch01_vectors.m')
 ```
 
-> 全部 12 個 `.m` 檔案皆已用 GNU Octave 10.2 實際執行驗證通過，輸出數值與同章 Python 版本一致；為了同時相容 MATLAB 與 Octave，程式採用「function 檔案 + local function」寫法（檔案以 `function <檔名>()` 開頭），並避開了 `xline`/`yline`/`sgtitle`/`null(A,'r')` 等 Octave 尚未支援的較新函式。由於作者端沒有正版 MATLAB 授權，尚未在正式 MATLAB 環境執行，語法上都是標準 MATLAB 語法，建議你仍自行在 MATLAB 中執行一次確認。
+> 全部 12 個 `.m` 檔案皆已在 **MATLAB R2025a** 驗證通過（輸出數值與同章 Python 版本一致），亦相容於 GNU Octave 10.2；為了同時相容 MATLAB 與 Octave，程式採用「function 檔案 + local function」寫法（檔案以 `function <檔名>()` 開頭），並避開了 `xline`/`yline`/`sgtitle`/`null(A,'r')` 等 Octave 尚未支援的較新函式。
 
 ### GNU Octave（免費、可跨平台取代 MATLAB）
 
