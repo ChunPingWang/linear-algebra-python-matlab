@@ -69,7 +69,7 @@ jupyter notebook ch01_vectors/ch01_vectors.ipynb
 run('ch01_vectors/ch01_vectors.m')
 ```
 
-> 全部 12 個 `.m` 檔案皆已在 **MATLAB R2025a** 驗證通過（輸出數值與同章 Python 版本一致），亦相容於 GNU Octave 10.2；為了同時相容 MATLAB 與 Octave，程式採用「function 檔案 + local function」寫法（檔案以 `function <檔名>()` 開頭），並避開了 `xline`/`yline`/`sgtitle`/`null(A,'r')` 等 Octave 尚未支援的較新函式。
+> 全部 12 個 `.m` 檔案皆已在 **MATLAB R2025a** 驗證通過（輸出數值與同章 Python 版本一致），亦相容於 GNU Octave 10.2；為了同時相容 MATLAB 與 Octave，需要輔助函式的章節（第 2、4、5、7、9、12 章）採用「function 檔案 + local function」寫法（檔案以 `function <檔名>()` 開頭），其餘章節為純 script，並避開了 `xline`/`yline`/`sgtitle`/`null(A,'r')` 等 Octave 尚未支援的較新函式。
 
 ### GNU Octave（免費、可跨平台取代 MATLAB）
 
@@ -113,7 +113,7 @@ octave:1> run('ch01_vectors/ch01_vectors.m')
 octave-cli --no-gui ch01_vectors.m
 ```
 
-**已知的 MATLAB／Octave 差異**：本教程的 `.m` 檔案已刻意避開 Octave 尚未支援的較新 MATLAB 函式（如 `xline`/`yline`/`sgtitle`、`null(A,'r')` 選項），並統一採用「function 檔案 + local function」寫法（而非 MATLAB R2016b+ 才支援的「script 檔案內含 local function」），因此兩邊都能直接執行，不需要額外修改。
+**已知的 MATLAB／Octave 差異**：本教程的 `.m` 檔案已刻意避開 Octave 尚未支援的較新 MATLAB 函式（如 `xline`/`yline`/`sgtitle`、`null(A,'r')` 選項）；需要輔助函式的章節（第 2、4、5、7、9、12 章）採用「function 檔案 + local function」寫法（而非 MATLAB R2016b+ 才支援的「script 檔案內含 local function」），其餘章節為純 script，因此兩邊都能直接執行，不需要額外修改。
 
 ## 建議學習順序
 
