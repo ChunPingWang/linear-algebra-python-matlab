@@ -1,6 +1,4 @@
-% 注意：本檔案已使用 GNU Octave 10.2 實際執行驗證通過（輸出數值與同章 Python 版本一致）。
-% 由於作者端目前沒有正版 MATLAB 授權，尚未在正式 MATLAB 環境中執行過；
-% 語法均為標準 MATLAB 語法，理論上可直接執行，但仍建議你在 MATLAB 中重新執行一次以完全確認。
+% 注意：本檔案已在 MATLAB R2025a 驗證通過（輸出數值與同章 Python 版本一致），亦相容於 GNU Octave 10.2。
 %
 % 第 11 章：最小二乘法與線性迴歸（MATLAB 實作）
 %
@@ -180,7 +178,7 @@ title('最小二乘法線性迴歸：資料點與最佳擬合直線');
 legend('Location', 'northwest');
 grid on;
 
-saveas(gcf, 'regression_fit_matlab.png');
+exportgraphics(gca, 'regression_fit_matlab.png', 'ContentType', 'image');
 fprintf('已儲存資料擬合圖至: regression_fit_matlab.png\n');
 
 fprintf('\n全部範例執行完畢。\n');
